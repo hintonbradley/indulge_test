@@ -4,6 +4,9 @@ var bodyParser = require('body-parser');
 var methodOverride = require("method-override");
 var app = express();
 
+// Add public file for css
+app.use(express.static(__dirname + '/public'));
+
 // Set the view engine to be "EJS"
 app.set('view engine', 'ejs');
 
