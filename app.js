@@ -4,8 +4,15 @@ var bodyParser = require('body-parser');
 var methodOverride = require("method-override");
 var app = express();
 
-// Add public file for css
+
+app.set('port', (process.env.PORT || 5000));
+
 app.use(express.static(__dirname + '/public'));
+
+// views is directory for all template files
+app.set('views', __dirname + '/views');
+
+
 
 // Set the view engine to be "EJS"
 app.set('view engine', 'ejs');
