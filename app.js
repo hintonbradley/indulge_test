@@ -4,6 +4,12 @@ var bodyParser = require('body-parser');
 var methodOverride = require("method-override");
 var app = express();
 
+//Create ability to make API/http calls:
+    request = require('request'),
+//In order to track sessions, express-session is required (command-line:npm install --save express-session):
+    session = require("express-session"),
+    app = express();
+
 
 app.set('port', (process.env.PORT || 5000));
 
